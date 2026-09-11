@@ -1,0 +1,35 @@
+{
+  "name": "gerador-documentos-brasileiros",
+  "version": "2.0.0",
+  "description": "Gerador de documentos brasileiros (CPF, CNPJ e Matrícula) com validação e interface CLI unificada",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "cpf": "node geradorCPF.js",
+    "cnpj": "node geradorCNPJ.js",
+    "matricula": "node geradorMatricula.js",
+    "test": "node test.js"
+  },
+  "keywords": [
+    "cpf",
+    "cnpj",
+    "matricula",
+    "generator",
+    "validator",
+    "brazilian",
+    "documents",
+    "cli"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "prompt-sync": "^4.2.0"
+  },
+  "engines": {
+    "node": ">=12.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": ""
+  }
+}
