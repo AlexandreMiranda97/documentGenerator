@@ -257,6 +257,9 @@ Não use para fins fraudulentos ou ilegais. Os documentos gerados são fictício
 
 ## 👤 Autor
 
+Alexandre Miranda da Costa - alexandremiranda97@gmail.com
+Senior QA Engineer
+
 Desenvolvido para fins de prática e aprendizado.
 
 ## 📞 Suporte
