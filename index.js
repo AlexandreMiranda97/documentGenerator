@@ -49,8 +49,9 @@ async function handleCPFGeneration() {
         }
         
         const targetDigit = parseInt(digitInput, 10);
-        const formatted = await askQuestion('Formatar CPF? (s/n): ');
-        const shouldFormat = formatted.toLowerCase() === 's';
+        // const formatted = await askQuestion('Formatar CPF? (s/n): ');
+        // const shouldFormat = formatted.toLowerCase() === 's';
+        const shouldFormat = true;
         
         const generatedCPF = generateCPFWithFinalDigit(targetDigit, shouldFormat);
         const unformattedCPF = generatedCPF.replace(/[^\d]/g, '');
@@ -75,8 +76,8 @@ async function handleCNPJGeneration() {
             return;
         }
         
-        const formatted = await askQuestion('Formatar CNPJ? (s/n): ');
-        const shouldFormat = formatted.toLowerCase() === 's';
+        // const formatted = await askQuestion('Formatar CNPJ? (s/n): ');
+        const shouldFormat = true;
         
         const cnpj = CNPJGenerator.generate(optionInput, shouldFormat);
         const unformattedCNPJ = cnpj.replace(/[^\w]/g, '');
