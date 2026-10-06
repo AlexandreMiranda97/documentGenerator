@@ -41,8 +41,6 @@ function generateCPFWithFinalDigit(targetDigit, formatted = true) {
         if (d2 === targetDigit) {
             const cpf = `${n1}${n2}${n3}${n4}${n5}${n6}${n7}${n8}${n9}${d1}${d2}`;
             
-            // if (!formatted) return cpf;
-            
             // Format CPF: XXX.XXX.XXX-XX
             return `${cpf.slice(0, 3)}.${cpf.slice(3, 6)}.${cpf.slice(6, 9)}-${cpf.slice(9)}`;
         }

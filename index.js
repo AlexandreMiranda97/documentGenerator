@@ -49,8 +49,6 @@ async function handleCPFGeneration() {
         }
         
         const targetDigit = parseInt(digitInput, 10);
-        // const formatted = await askQuestion('Formatar CPF? (s/n): ');
-        // const shouldFormat = formatted.toLowerCase() === 's';
         const shouldFormat = true;
         
         const generatedCPF = generateCPFWithFinalDigit(targetDigit, shouldFormat);
@@ -75,15 +73,14 @@ async function handleCNPJGeneration() {
             console.error('Erro: Opção inválida. Escolha 1 ou 2.');
             return;
         }
-        
-        // const formatted = await askQuestion('Formatar CNPJ? (s/n): ');
+
         const shouldFormat = true;
         
         const cnpj = CNPJGenerator.generate(optionInput, shouldFormat);
         const unformattedCNPJ = cnpj.replace(/[^\w]/g, '');
         
         console.log(`\n[CNPJ GERADO] ${cnpj}`);
-        console.log(`[SEM MÁSCARA] ${unformattedCNPJ}`);
+        console.log(`[S/ MÁSCARA] ${unformattedCNPJ}`);
         console.log(`[VALIDAÇÃO] ${CNPJGenerator.validate(cnpj) ? 'Válido' : 'Inválido'}`);
     } catch (error) {
         console.error(`Erro: ${error.message}`);
